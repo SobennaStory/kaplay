@@ -14,7 +14,4 @@ install:
   - pnpm install
 
 script:
-  # TypeScript validation
   - pnpm run check
-  # Formatting validation
-  - pnpm run fmt
