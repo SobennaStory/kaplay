@@ -8,13 +8,11 @@ cache:
     - ~/.pnpm-store
 
 before_install:
-  # Install pnpm
   - npm install -g pnpm@9
 
-install:
-  # IMPORTANT: install workspace deps, not npm
-  - pnpm install -r --frozen-lockfile
+install: false
 
 script:
+  - pnpm install --frozen-lockfile
   - pnpm run check
   - pnpm run fmt
