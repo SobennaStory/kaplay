@@ -11,9 +11,6 @@ before_install:
   # Install pnpm >= 9.1
   - npm install -g pnpm@9
 
-install:
-  - pnpm install --frozen-lockfile
-
 script:
   # TypeScript validation
   - pnpm run check
