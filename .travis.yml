@@ -8,11 +8,13 @@ cache:
     - ~/.pnpm-store
 
 before_install:
-  # Install pnpm >= 9.1
+  # Install pnpm
   - npm install -g pnpm@9
 
+install:
+  # IMPORTANT: install workspace deps, not npm
+  - pnpm install -r --frozen-lockfile
+
 script:
-  # TypeScript validation
   - pnpm run check
-  # Formatting validation
   - pnpm run fmt
